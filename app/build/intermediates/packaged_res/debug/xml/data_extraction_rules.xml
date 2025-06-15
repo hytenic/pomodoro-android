@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!--
+        To learn more about data extraction rules, see the official documentation at
+        https://developer.android.com/guide/topics/data/data-extraction-rules
+        -->
+    </cloud-backup>
+    <device-transfer>
+        <!--
+        To learn more about data extraction rules, see the official documentation at
+        https://developer.android.com/guide/topics/data/data-extraction-rules
+        -->
+    </device-transfer>
+</data-extraction-rules>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!--
+   In this file you can specify which files/directories should be backed up.
+   By default, all shared preferences, files in the cache directory, and files in the
+   no_backup directory are excluded from backups.
+
+   To learn more about what is and is not backed up, please see the
+   associated Android documentation about “Auto Backup for Apps” at
+   https://developer.android.com/guide/topics/data/autobackup
+
+   To see a list of currently supported devices, you can run the following command:
+       adb shell dumpsys backup
+
+   To specify which files/directories to back up, you can use the <include> and
+   <exclude> tags.  By default, all files are included except for those in the
+   no_backup directory.  The <include> and <exclude> tags support the following
+   attributes:
+
+       - domain:
+         Specifies the domain of the file.  Valid values are:
+           - file:           Files in the directory returned by getFilesDir().
+           - database:       Files in the directory returned by getDatabasePath().
+           - sharedpref:     Files in the directory returned by getSharedPreferencesPath().
+           - external:       Files in the directory returned by getExternalFilesDir().
+           - root:           Files in the path specified by the path attribute.
+
+       - path:
+         Specifies the path to the file or directory, relative to the domain.
+
+
+   Examples:
+
+       To back up all shared preferences:
+       <include domain="sharedpref" path="."/>
+
+       To back up a specific shared preference file:
+       <include domain="sharedpref" path="my_preference_file.xml"/>
+
+       To exclude a specific file from backups:
+       <exclude domain="file" path="my_private_file.txt"/>
+
+
+   The <full-backup-content> section can also contain a <device-specific-content>
+   section.  This section can be used to specify different backup rules for
+   different devices.
+
+   For example, you can use this to exclude a large file from being backed up
+   on low-storage devices.
+
+   <device-specific-content>
+       <when minSdk="23" />
+       <exclude domain="file" path="large_file.bin"/>
+   </device-specific-content>
+
+   -->
+</full-backup-content>
